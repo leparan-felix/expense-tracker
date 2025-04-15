@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function SearchBar() {
+function SearchBar({ searchTerm, onSearch }) {
   return (
-    <div>
-        <input type="text" placeholder="Search expenses" 
-        value={FormData.SearchBar}/>
-        
-      
-    </div>
-  )
+    <input
+      type="text"
+      placeholder="Search expenses..."
+      value={searchTerm}
+      onChange={onSearch}
+    />
+  );
 }
 
-export default SearchBar
+export default SearchBar;
